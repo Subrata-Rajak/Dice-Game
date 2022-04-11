@@ -1,31 +1,33 @@
 var counter = 0;
 
 document.querySelector(".refresh_btn").addEventListener("click", function () {
-    var randomNumberOne = Math.floor(Math.random() * 6) + 1;
+    var randomNumber1 = Math.floor(Math.random() * 6) + 1; //1-6
 
-    var randomDiceImageOne = "dice" + randomNumberOne + ".png";
+    var randomDiceImage = "dice" + randomNumber1 + ".png"; //dice1.png - dice6.png
 
-    var randomDiceImageSourceOne = "images/" + randomDiceImageOne;
+    var randomImageSource = "images/" + randomDiceImage; //images/dice1.png - images/dice6.png
 
-    document.querySelector(".img1").setAttribute("src", randomDiceImageSourceOne);
+    var image1 = document.querySelectorAll("img")[0];
 
-    var randomNumberTwo = Math.floor(Math.random() * 6) + 1;
+    image1.setAttribute("src", randomImageSource);
 
-    var randomDiceImageTwo = "dice" + randomNumberTwo + ".png";
 
-    var randomDiceImageSourceTwo = "images/" + randomDiceImageTwo;
+    var randomNumber2 = Math.floor(Math.random() * 6) + 1;
 
-    document.querySelector(".img2").setAttribute("src", randomDiceImageSourceTwo);
+    var randomImageSource2 = "images/dice" + randomNumber2 + ".png";
 
-    if (randomNumberOne > randomNumberTwo) {
-        document.querySelector("h1").innerHTML = "Player 1 Wins";
-    } else if (randomNumberTwo > randomNumberOne) {
-        document.querySelector("h1").innerHTML = "Payer 2 Wins";
+    document.querySelectorAll("img")[1].setAttribute("src", randomImageSource2);
+
+
+    //If player 1 wins
+    if (randomNumber1 > randomNumber2) {
+        document.querySelector("h1").innerHTML = "🚩 Play 1 Wins!";
+    } else if (randomNumber2 > randomNumber1) {
+        document.querySelector("h1").innerHTML = "Player 2 Wins! 🚩";
     } else {
-        document.querySelector("h1").innerHTML = "It's a Draw!";
-    } 
+        document.querySelector("h1").innerHTML = "Draw!";
+    }
 
     counter++;
     document.querySelector(".play_time").innerHTML = "You played " + counter + " times";
 });
-
