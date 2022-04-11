@@ -5,7 +5,7 @@ document.querySelector(".refresh_btn").addEventListener("click", function () {
 
     var randomDiceImageOne = "dice" + randomNumberOne + ".png";
 
-    var randomDiceImageSourceOne = "Images/" + randomDiceImageOne;
+    var randomDiceImageSourceOne = "images/" + randomDiceImageOne;
 
     document.querySelector(".img1").setAttribute("src", randomDiceImageSourceOne);
 
@@ -13,7 +13,7 @@ document.querySelector(".refresh_btn").addEventListener("click", function () {
 
     var randomDiceImageTwo = "dice" + randomNumberTwo + ".png";
 
-    var randomDiceImageSourceTwo = "Images/" + randomDiceImageTwo;
+    var randomDiceImageSourceTwo = "images/" + randomDiceImageTwo;
 
     document.querySelector(".img2").setAttribute("src", randomDiceImageSourceTwo);
 
